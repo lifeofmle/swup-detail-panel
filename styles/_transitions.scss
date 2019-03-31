@@ -1,0 +1,20 @@
+.transition-fade {
+  transition: 0.4s;
+  opacity: 1;
+}
+
+.transition-right {
+  transition: 0.4s;
+  transform: translate3d(0, 0, 0);
+}
+
+html {
+  &.is-animating {
+    .transition-fade {
+      opacity: 0;
+    }
+    .transition-right {
+      transform: translate3d(100%, 0, 0);
+    }
+  }
+}
